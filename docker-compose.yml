@@ -1,0 +1,20 @@
+# Версия docker-compose
+version '3'
+# Список наших сервисов (контейнеров)
+services:
+  nginx:
+    image: nginx:latest
+    restart: always
+    ports:
+      - "9080:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./public:/opt/www
+      - ./logs:/opt/logs
+  nodejs:
+    build: ./image
+    restart: always
+    ports:
+      - "9088:8000"
+    volumes:
+      - ./app:/opt/app
