@@ -1,0 +1,55 @@
+html, body 
+{
+    background: #DDDDFF;
+}
+
+table
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th 
+{
+    background: white;
+    border:1px solid black;
+    text-align:center;
+}
+
+.modal
+{
+	display:none;
+    top: 40%;
+    left: 50%;
+    z-index: 2;
+    margin: 0;
+    width: 85%;
+    max-width: 400px;
+    position: fixed;
+    padding: 15px;
+    border: 1px solid black;
+    background: white;
+    border-radius: 5px;
+	transform: translate(-50%, 0);
+}
+
+.btn-close
+{
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    padding: 0;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white
+}
+
+input[type=text] 
+{
+    width: 100%;
+    padding: 10px;
+    margin: 10px  0;
+    box-sizing: border-box;
+}

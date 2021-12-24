@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="st.css">
+</head>
+
+<body>
+    <div><button type="button" class="add">Добавить студента</button></div>
+    <table>
+        <thead>
+            <tr>
+                <th>ФИО</th>
+                <th>Дата рождения</th>
+                <th>Группа</th>
+                <th>Телефон</th>
+                <th>Изменение</th>
+            </tr>
+        </thead>
+        <tbody id="table">
+        </tbody>
+    </table>
+    <button type="button" class="add">Добавить студента</button>
+
+    <div class="modal" id="remove">
+        <center> <b> Вы точно хотите удалить студента? </b> 
+        <p></p>
+        <button type="button" class="submit" data-func="remove">Удалить</button> 
+        <button type="button" class="close" data-id="remove">Отменить</button> </center>
+        <button type="button" class="btn-close" data-id="remove">X</button>
+    </div>
+
+    <div class="modal" id="edit">
+        <form autocomplete="off">
+            <input type="hidden" id="Id" value="-1">
+            <b>ФИО</b>
+            <input type="text" id="name" placeholder="ФИО">
+            <b>Дата рождения</b>
+            <input type="text" id="birth" placeholder="Дата рождения">
+            <b>Группа</b>
+            <input type="text" id="group" placeholder="Группа">
+            <b>Телефон</b>
+            <input type="text" id="phone" placeholder="Телефон">
+            <button type="button" class="close" data-id="edit">Отменить</button>
+            <button type="button" class="submit" data-func="submit">Сохранить</button>
+            <button type="button" class="btn-close" data-id="edit">X</button>
+        </form>
+    </div>
+    
+</body>
+<script src="stu.js"></script>
+</html>
